@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+
+html, body, canvas {
+  cursor: default;
+  width: 100%;
+  background: #1d1d1d;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+} 
+
+html, body, ul {
+  cursor: default;
+  display: flex;
+  font-family: 'Alata', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+.cardholder {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 1100px;
+  height: 350px;
+  bottom: 10px;
+  transform: translateX(-50%);
+  
+}
+
+
+.card {
+  background-color: #383838;
+  width: 250px;
+  height: 300px;
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Alata', sans-serif;
+  color:white;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 10%;
+}
+
+.divider {
+  background-color: white;
+  height: 3px;
+  width: 225px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 3%;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.preview {
+  max-width: 100%;
+  height: 140px; /* Set a fixed height */
+  object-fit: contain;
+  margin-top: 5%;
+  background-color: #222;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  box-sizing: border-box; /* include padding in element's width */
+  width: calc(100% - 20px); /* subtract 20px from the width to create a 10px gap on both sides */
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center; /* center the text horizontally */
+  display: flex; /* use flexbox to center the text vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-family: 'Alata', sans-serif;
+  color: rgba(153, 102, 255, 0.8);
+  font-size: 30px;
+  margin: 0;
+  text-shadow: 0px 5px 20px rgba(139, 82, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px 25px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 13px;
+}
+
+h6 {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+
+.n {
+  color:#8a2be2;
+}
+
+.price1 {
+  font-family: 'Alata', sans-serif;
+  color: rgba(212, 255, 82, 0.8);
+  font-size: 30px;
+  margin: 0;
+  text-shadow: 0px 5px 20px rgba(212, 255, 82, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px 25px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 13px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.container {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 100px); /* Update height to subtract the height of the h1 element */
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+  width: 100%; /* Add width property to center content horizontally */
+}
+  
+
+b {
+    text-align: center;
+    color: blueviolet;
+}
+
+h1 {
+  transition: color 0.5s ease;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  letter-spacing: 5px;
+  margin: 0;
+  position: absolute; /* Add absolute positioning */
+  top: 40%; /* Set top to 50% */
+  left: 50%; /* Set left to 50% */
+  transform: translate(-50%, -50%); /* Use translate to center horizontally and vertically */
+  padding:0;
+}
+
+h1:hover {
+  cursor: default;
+  color: rgba(153, 102, 255, 0.8);
+}
+
+
+
+a {
+  cursor: pointer;
+  color: rgb(153, 102, 255);
+  text-decoration: none;
+}
+
+
+.navbar {
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+.containerz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color:rgba(153, 102, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      display: flex;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+      display: none;
+    }
+  }
+  
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Added background color with opacity for shading */
+    backdrop-filter: blur(5px); /* Added backdrop-filter property for background blur */
+    z-index: 9999;
+    animation: slideIn 0.3s forwards;
+}
+  
+.popup-content {
+    background-color: #474747;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+
+  
+.popup-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+  
+.popup-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.popup-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .popup-links li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .popup-links a {
+    display: block;
+    padding: 10px;
+    background-color: #ddd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-image: linear-gradient(to right, #000000 0%, #474747 100%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    /* Set a fixed width for the buttons */
+    width: 200px;
+  }
+  
+  .popup-links a:hover {
+    background-position: right top;
+    /* Add a purple color on hover */
+    background-color: #8a2be2;
+    color: #fff;
+    /* Add a transform effect on hover */
+    transform: translateY(-5px);
+  }
+  
+  .popup-links a:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: ease-out 3s; /* Use ease-out transition for a smooth effect */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .buycard {
+      width: 100%; /* Set 100% width for buycard elements on small screens */
+    }
+  
+    .box {
+      flex-direction: column; /* Change flex direction to column on small screens */
+      align-items: center; /* Align items to the center horizontally */
+      justify-content: flex-start; /* Align items to the top */
+      height: auto; /* Allow box height to grow as needed */
+      max-height: none; /* Remove max-height constraint */
+      overflow-y: visible; /* Allow vertical overflow */
+    }
+  }
+    
+
+  .wrapper {
+    position: relative;
+    min-height: calc(100vh);
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    /* Set to fixed position to stick to the bottom of the viewport */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 0;
+  }
+  
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+  
+  /* Media queries for different device sizes */
+  @media screen and (max-width: 845px) {
+    h1 {
+      font-size: 100px; /* Font size for devices with max width of 768px */
+    }
+  }
+  
+  @media screen and (max-width: 465px) {
+    h1 {
+      font-size: 60px; /* Font size for devices with max width of 480px */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .cardholder {
+      flex-wrap: wrap;
+    }
+  
+    .card {
+      margin: 10px 0;
+    }
+  }
